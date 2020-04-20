@@ -83,3 +83,10 @@ Example:
 localhost:3333/virtualClasses
 ```
 
+#### GET /iras
+Returns an array of JSON objects each one representing I.R.A.'s information
+Example:
+```
+localhost:3333/iras
+```
+

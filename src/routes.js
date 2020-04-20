@@ -4,6 +4,7 @@ const ProfileController = require('./controllers/ProfileController');
 const MessageController = require('./controllers/MessageController');
 const NotificationController = require('./controllers/NotificationController');
 const VirtualClassController = require('./controllers/VirtualClassController');
+const IRAController = require('./controllers/IRAController');
 
 const routes = express.Router();
 
@@ -14,6 +15,8 @@ routes.get('/notifications', NotificationController.index);
 routes.get('/messages', MessageController.index);
 
 routes.get('/virtualClasses', VirtualClassController.index);
+
+routes.get('/iras', IRAController.index);
 
 module.exports = routes;
 
