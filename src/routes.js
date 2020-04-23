@@ -5,6 +5,7 @@ const MessageController = require('./controllers/MessageController');
 const NotificationController = require('./controllers/NotificationController');
 const VirtualClassController = require('./controllers/VirtualClassController');
 const IRAController = require('./controllers/IRAController');
+const RequirementController = require('./controllers/RequirementController');
 
 const routes = express.Router();
 
@@ -17,6 +18,8 @@ routes.get('/messages', MessageController.index);
 routes.get('/virtualClasses', VirtualClassController.index);
 
 routes.get('/iras', IRAController.index);
+
+routes.get('/requirements', RequirementController.index);
 
 module.exports = routes;
 
