@@ -90,3 +90,9 @@ Example:
 localhost:3333/iras
 ```
 
+#### GET /requirements
+Returns an array with current curse's progress and an array of JSON objects each one representing curse's requirement
+Example:
+```
+localhost:3333/requirements
+```
