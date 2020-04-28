@@ -214,7 +214,6 @@ Example:
 ```
 localhost:3333/reports
 ```
-## Report
 ```
 [
   {
