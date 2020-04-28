@@ -96,3 +96,10 @@ Example:
 ```
 localhost:3333/requirements
 ```
+
+#### GET /reports
+Returns an array of JSON objects each one representing studen's grades, frequency, total classes, situation etc.
+Example:
+```
+localhost:3333/reports
+```
