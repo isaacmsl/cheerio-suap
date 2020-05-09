@@ -7,6 +7,7 @@ const VirtualClassController = require('./controllers/VirtualClassController');
 const IRAController = require('./controllers/IRAController');
 const RequirementController = require('./controllers/RequirementController');
 const ReportController = require('./controllers/ReportController');
+const ClassTimeController = require('./controllers/ClassTimeController');
 
 const routes = express.Router();
 
@@ -23,6 +24,8 @@ routes.get('/iras', IRAController.index);
 routes.get('/requirements', RequirementController.index);
 
 routes.get('/reports', ReportController.index);
+
+routes.get('/classesTime', ClassTimeController.index);
 
 module.exports = routes;
 
