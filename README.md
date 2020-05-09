@@ -256,3 +256,31 @@ localhost:3333/reports
   ...
 ]
 ```
+
+#### GET /classesTime
+Returns an array of JSON objects each one representing class's time.
+Example:
+```
+localhost:3333/classesTime
+```
+```
+[
+  {
+    "time": "13:00 - 13:45",
+    "monday": "Biologia II(120H)",
+    "tuesday": "Fundamentos de sistemas operacionais e Sistemas operacionais de redes",
+    "wednesday": "Sociologia do Trabalho(30H)",
+    "thursday": "Projeto de Desenvolvimento de Software",
+    "friday": "Língua Portuguesa e Literatura IV(60H)"
+  },
+  {
+    "time": "13:45 - 14:30",
+    "monday": "Biologia II(120H)",
+    "tuesday": "Fundamentos de sistemas operacionais e Sistemas operacionais de redes",
+    "wednesday": "Sociologia do Trabalho(30H)",
+    "thursday": "Projeto de Desenvolvimento de Software",
+    "friday": "Língua Portuguesa e Literatura IV(60H)"
+  },
+  ...
+]
+```
