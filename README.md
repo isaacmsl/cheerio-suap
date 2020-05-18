@@ -256,7 +256,7 @@ localhost:3333/reports
 ```
 
 #### GET /classesTime
-Return arrays each one representing week's day with our classes times.
+Return arrays each one representing week's day with your classes times.
 
 Where:
   0 = Monday
