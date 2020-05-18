@@ -329,5 +329,34 @@ Returns Monday's classes times.
 ]
 ```
 
-
-
+#### GET /meals
+Returns an array of JSON that contains last three meals requested.
+Example:
+```
+localhost:3333/meals
+```
+```
+[
+  {
+    "request_date": "08/11/2019",
+    "to_date": "11/11/2019",
+    "type": "Jantar",
+    "reason": "Projeto integrador",
+    "situation": "Deferida"
+  },
+  {
+    "request_date": "18/10/2019",
+    "to_date": "21/10/2019",
+    "type": "Jantar",
+    "reason": "Projeto integrador",
+    "situation": "Deferida"
+  },
+  {
+    "request_date": "14/10/2019",
+    "to_date": "15/10/2019",
+    "type": "Jantar",
+    "reason": "Projeto integrador",
+    "situation": "Deferida"
+  }
+]
+```
