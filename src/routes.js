@@ -26,6 +26,7 @@ routes.get('/requirements', RequirementController.index);
 routes.get('/reports', ReportController.index);
 
 routes.get('/classesTime', ClassTimeController.index);
+routes.get('/classesTime/:dayIndex', ClassTimeController.byDay);
 
 module.exports = routes;
 

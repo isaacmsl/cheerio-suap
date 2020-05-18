@@ -15,9 +15,7 @@ A way to get SUAP user information using cheerio in Nodejs
 - [IRAs](#get-iras)
 - [requirements](#get-requirements)
 - [reports](#get-reports)
-
-
-
+- [classesTime](#get-classesTime)
 
 
 ### Privacy
@@ -258,29 +256,78 @@ localhost:3333/reports
 ```
 
 #### GET /classesTime
-Returns an array of JSON objects each one representing class's time.
+Return arrays each one representing week's day with your classes times.
+
+Where:
+  0 = Monday
+  1 = Tuesday
+  2 = Wednesday
+  3 = Thursday
+  4 = Friday
+
 Example:
 ```
 localhost:3333/classesTime
 ```
+Return all days.
+```
+[
+  // monday [0]
+  [
+    {
+      "time": "13:00 - 13:45",
+      "class": "Biologia II(120H)"
+    },
+    {
+      "time": "13:45 - 14:30",
+      "class": "Biologia II(120H)"
+    },
+    ...
+  ],
+  // tuesday [1]
+  [
+    {
+      "time": "13:00 - 13:45",
+      "class": "Fundamentos de sistemas operacionais e Sistemas operacionais de redes"
+    },
+    {
+      "time": "13:45 - 14:30",
+      "class": "Fundamentos de sistemas operacionais e Sistemas operacionais de redes"
+    },
+    ...
+  ],
+  ...
+]
+```
+
+#### GET /classesTime/:dayIndex
+Return classes time of specific day.
+
+Where:
+  0 = Monday
+  1 = Tuesday
+  2 = Wednesday
+  3 = Thursday
+  4 = Friday
+
+Example:
+```
+localhost:3333/classesTime/0
+```
+Returns Monday's classes times.
 ```
 [
   {
     "time": "13:00 - 13:45",
-    "monday": "Biologia II(120H)",
-    "tuesday": "Fundamentos de sistemas operacionais e Sistemas operacionais de redes",
-    "wednesday": "Sociologia do Trabalho(30H)",
-    "thursday": "Projeto de Desenvolvimento de Software",
-    "friday": "Língua Portuguesa e Literatura IV(60H)"
+    "class": "Biologia II(120H)"
   },
   {
     "time": "13:45 - 14:30",
-    "monday": "Biologia II(120H)",
-    "tuesday": "Fundamentos de sistemas operacionais e Sistemas operacionais de redes",
-    "wednesday": "Sociologia do Trabalho(30H)",
-    "thursday": "Projeto de Desenvolvimento de Software",
-    "friday": "Língua Portuguesa e Literatura IV(60H)"
+    "class": "Biologia II(120H)"
   },
   ...
 ]
 ```
+
+
+
