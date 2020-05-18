@@ -16,6 +16,7 @@ A way to get SUAP user information using cheerio in Nodejs
 - [requirements](#get-requirements)
 - [reports](#get-reports)
 - [classesTime](#get-classesTime)
+- [meals](#get-meals)
 
 
 ### Privacy
