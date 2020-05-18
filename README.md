@@ -15,9 +15,7 @@ A way to get SUAP user information using cheerio in Nodejs
 - [IRAs](#get-iras)
 - [requirements](#get-requirements)
 - [reports](#get-reports)
-
-
-
+- [classesTime](#get-classesTime)
 
 
 ### Privacy
@@ -258,7 +256,7 @@ localhost:3333/reports
 ```
 
 #### GET /classesTime
-Return arrays each one representing week's days.
+Return arrays each one representing week's day with our classes times.
 
 Where:
   0 = Monday
