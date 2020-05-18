@@ -3,13 +3,13 @@ const suapSettings = require('../utils/suapSettings');
 const suapURL = suapSettings.SUAP_URL;
 // const matricula = suapSettings.MATRICULA;
 
-const academicDataUrl = suapURL + `/ae/solicitar_refeicao/4/?tab=1`;
+const dataUrl = suapURL + `/ae/solicitar_refeicao/4/?tab=1`;
 
 const qntGetMeals = 3;
 
 module.exports = {
     async index(_, response) {
-        let $ = await suapSettings.getCheerioOf(academicDataUrl);
+        let $ = await suapSettings.getCheerioOf(dataUrl);
 
         const table = await $('tbody');
 
