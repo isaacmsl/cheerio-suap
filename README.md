@@ -126,7 +126,7 @@ localhost:3333/notifications
 
 
 #### GET /virtualClasses
-Returns an array of JSON objects each one representing SUAP's virtual class.
+Returns an array of JSON objects each one representing SUAP's virtual classes.
 Example:
 ```
 localhost:3333/virtualClasses
@@ -134,20 +134,19 @@ localhost:3333/virtualClasses
 ```
 [
   {
-    "id": "TIN.0025",
-    "name": "Gestão Organizacional"
+    "virtual_id": "68405",
+    "name": "Gestão Organizacional (NA)",
+    "professor": "Maira Medeiros de Araujo"
   },
   {
-    "id": "TIN.0042",
-    "name": "Projeto de Desenvolvimento de Software"
+    "virtual_id": "68406",
+    "name": "Projeto de Desenvolvimento de Software (Curso 401)",
+    "professor": "Daniel Bruno Alves dos Santos"
   },
   {
-    "id": "TIN.0191",
-    "name": "Sociologia do Trabalho(30H)"
-  },
-  {
-    "id": "TIN.0041",
-    "name": "Programação para Internet"
+    "virtual_id": "68410",
+    "name": "Sociologia do Trabalho(30H)",
+    "professor": "Ana Eliza Trajano Soares"
   },
   ...
 ]
