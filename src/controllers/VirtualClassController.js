@@ -1,21 +1,29 @@
 const suapSettings = require('../utils/suapSettings');
 
 const suapURL = suapSettings.SUAP_URL;
-// const matricula = suapSettings.MATRICULA;
+const matricula = suapSettings.MATRICULA;
 
-const virtualClassUrl = suapURL + '/edu/salas_virtuais/';
+const dataUrl = suapURL + `/edu/aluno/${matricula}/?tab=locais_aula_aluno`;
+
+const regex = new RegExp('\\ .* (.*?)\\\n', 'g');
+const regexName = new RegExp('\n* - (.*) -');
+const rmWhiteSpaces = /\n^\s+|\s+$/gm;
 
 module.exports = {
     async index(_, response) {
-        let $ = await suapSettings.getCheerioOf(virtualClassUrl);
+        let $ = await suapSettings.getCheerioOf(dataUrl);
 
-        const bruteVirtualClasses = await $('#content > div.box > div > div.flex-container.boxes.services > div');
+        const table = await $('table tbody').eq(4);
+
+        const rows = table.children('tr');
+
 
         const virtualClasses = [];
-        for (let i = 0; i < bruteVirtualClasses.length; i++) {
+        for (let row = 0; row < rows.length; row++) {
             const virtualClass = {
-                id: bruteVirtualClasses.children('h4').eq(i).text(),
-                name: bruteVirtualClasses.children('h5').eq(i).text(),
+                virtual_id: rows.eq(row).children('td').eq(0).text().split(regex)[3],
+                name: rows.eq(row).children('td').eq(1).text().split(regexName)[1],
+                professor: rows.eq(row).children('td').eq(1).text().replace(rmWhiteSpaces,'').split(':')[2],
             };
             virtualClasses.push(virtualClass);
         }
